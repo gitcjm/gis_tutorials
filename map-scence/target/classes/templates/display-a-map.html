@@ -32,13 +32,13 @@
             esriConfig.apiKey = "AAPK5cac562e3b3d4388a7fbbb067d123a22hLkBXJc_jWbXVE9ktwKeYt3WW6QNCKPUnYUFj6iWKWE3NrxDfN8H00IWosmq-MN8";
 
             const map = new Map({
-               basemap: "arcgis-topographic"    // Basemap layer service
+               basemap: "osm-streets"    // Basemap layer service
             });
 
             const view = new MapView({
                 map: map,
-                center: [111, 35.1],
-                zoom: 12,
+                center: [111.21, 35.35],  // 闻喜中心坐标
+                zoom: 13,
                 container: "viewDiv"    // Div element
             });
 
@@ -71,7 +71,8 @@
                 paths: [
                     [111, 35],
                     [111.105, 35.1],
-                    [111.115, 35.05]
+                    [111.115, 35.05],
+                    [111.12, 35.125]
                 ]
             };
             const simpleLineSymbol = {

@@ -1,5 +1,6 @@
 package com.str.web;
 
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,5 +17,24 @@ public class GisController {
         return new ModelAndView("display-a-map.html");
     }
 
+    @GetMapping("/toggle-map")
+    public ModelAndView toggleBasemap(HttpSession session) {
+        return new ModelAndView("toggle-map.html");
+    }
+
+    @GetMapping("/add-feature")
+    public ModelAndView addFeatureLayer(HttpSession session) {
+        return new ModelAndView("add-feature-layer.html");
+    }
+
+    @GetMapping("/disp-location")
+    public ModelAndView dispYourLocation(HttpSession session) {
+        return new ModelAndView("display-your-location.html");
+    }
+
+    @GetMapping("/search-places")
+    public ModelAndView searchPlaces(HttpSession session) {
+        return new ModelAndView("search-places.html");
+    }
 
 }
