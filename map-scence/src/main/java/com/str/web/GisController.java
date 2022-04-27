@@ -32,9 +32,14 @@ public class GisController {
         return new ModelAndView("display-your-location.html");
     }
 
-    @GetMapping("/search-places")
-    public ModelAndView searchPlaces(HttpSession session) {
-        return new ModelAndView("search-places.html");
+    @GetMapping("/search-address")
+    public ModelAndView searchAddress(HttpSession session) {
+        return new ModelAndView("search-address.html");
+    }
+
+    @GetMapping("/find-places")
+    public ModelAndView findPlaces(HttpSession session) {
+        return new ModelAndView("find-places.html");
     }
 
 }
